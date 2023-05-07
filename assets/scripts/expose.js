@@ -4,8 +4,6 @@ window.addEventListener('DOMContentLoaded', init);
 
 function init() {
   // TODO
-}
-
   const hornSelect = document.querySelector("#horn-select");
   const myImage = document.querySelector('img[alt="No image selected"]');
 
@@ -37,3 +35,6 @@ function init() {
     }
 
   }
+}
+
+  
