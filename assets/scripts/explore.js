@@ -49,25 +49,22 @@ function init() {
     utterThis.pitch = 1;
     utterThis.rate = 1;
     synth.speak(utterThis);
-    
-    flip(synth.speak);
+    faceImage.src = "./assets/images/smiling-open.png";
 
-    function flip(e){
-      if(e){
-        faceImage.src = "./assets/images/smiling-open.png"
+    function synthSpeakCheck(){
+      const amSpeaking = synth.speaking;
+      if(!amSpeaking==true){
+        faceImage.src = "./assets/images/smiling.png";      
       }
       else{
-        faceImage.src = "./assets/images/smiling.png"
+        setTimeout(synthSpeakCheck,100);
       }
     }
-    
-
-    }
-    
+    synthSpeakCheck();
     
   }
   
-
+}
   
     
   
